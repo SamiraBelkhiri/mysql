@@ -1,0 +1,24 @@
+<?php
+declare(strict_types=1);
+
+function openConnection(){
+    $dbhost    = "localhost";
+    $dbuser    = "samira";
+    $dbpass    = "password";
+    $db        = "becode";
+
+    $pdo = new PDO('mysql:host='. $dbhost.';dbname='. $db, $dbuser, $dbpass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
+    return $pdo;
+}
+
+
+
+
+
+
+
+
+?>
