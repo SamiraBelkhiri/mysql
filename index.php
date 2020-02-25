@@ -8,6 +8,8 @@ error_reporting(E_ALL);
 include 'connection.php';
 include 'insert.php';
 
+$objectHere = new connection();
+$returnValue = $objectHere->openConnection();
 
 if ($_POST){
     $first_name = $_POST['first_name'];

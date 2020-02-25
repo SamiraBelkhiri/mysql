@@ -1,19 +1,17 @@
 <?php
 declare(strict_types=1);
 
-include 'connection.php'
-
-
-
-
-
+//include 'connection.php'
 
 ?>
 
 <html>
+<head><meta charset="utf-8">
+</head>
 <body>
+
 <h1>New user please subscribe</h1>
-<form action="index.php" method="post">
+<form  method="post">
 
         <p>
             <label for="first_name">First Name:</label>
