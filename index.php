@@ -36,7 +36,7 @@ foreach ($statement as $storedInformation):
     </tr>
     <tr>
         <td>
-            <img src="<?php echo 'Images/' . $storedInformation['preferred_language'] . '.png' ?>" alt="flag">
+            <img src="<?php echo 'images/' . $storedInformation['preferred_language'] . '.png' ?>" alt="flag">
         </td>
     </tr>
     <tr>

@@ -35,6 +35,7 @@ declare(strict_types=1);
     <select name="preferred_language">
         <option value="be">nl</option>
         <option value="de">de</option>
+        <option value="be">be</option>
         <option value="en">en</option>
         <option value="fr">fr</option>
         <option value="ru">ru</option>
