@@ -1,7 +1,7 @@
 <?php
 
 
-class Post
+class UserInformation
 {
     private $firstName;
     private $lastName;
@@ -15,24 +15,25 @@ class Post
     private $quote;
     private $quoteAuthor;
 
+
     public function __construct(string $firstName, string $lastName, string $username, string $linkedin,
                                 string $github, string $email, string $preferredLang, string $avatar, string $video,
                                 string $quote, string $quoteAuthor)
     {
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->username = $username;
-        $this->linkedin = $linkedin;
-        $this->github = $github;
-        $this->email = $email;
-        $this->preferredLang = $preferredLang;
-        $this->avatar = $avatar;
-        $this->video = $video;
-        $this->quote = $quote;
-        $this->quoteAuthor = $quoteAuthor;
+        $this->firstName = trim(htmlspecialchars($firstName));
+        $this->lastName = trim(htmlspecialchars($lastName));
+        $this->username = trim(htmlspecialchars($username));
+        $this->linkedin = trim(htmlspecialchars($linkedin));
+        $this->github = trim(htmlspecialchars($github));
+        $this->email = trim(htmlspecialchars($email));
+        $this->preferredLang = trim(htmlspecialchars($preferredLang));
+        $this->avatar = trim(htmlspecialchars($avatar));
+        $this->video = trim(htmlspecialchars($video));
+        $this->quote = trim(htmlspecialchars($quote));
+        $this->quoteAuthor = trim(htmlspecialchars($quoteAuthor));
     }
 
-    //setters
+    //getters
 
     public function getFirstName() : string
     {
@@ -64,6 +65,13 @@ class Post
         return $this->email;
     }
 
+    public function checkEmail() : string
+    {
+        if (filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            return $this->email;
+        }
+    }
+
     public function getPreferredLang() : string
     {
         return $this->preferredLang;
@@ -88,4 +96,5 @@ class Post
     {
         return $this->quoteAuthor;
     }
+
 }

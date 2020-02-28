@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+class Connection
+{
+    private $dbhost;
+    private $dbuser;
+    private $dbpass;
+    private $db;
 
     function openConnection()
     {
@@ -20,3 +26,4 @@ declare(strict_types=1);
     }
 
 
+}
